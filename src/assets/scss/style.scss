@@ -1,0 +1,332 @@
+@import './variables';
+
+// миксины
+@import './_mixins.scss';
+
+// обнуление стилей
+@import './reset.scss';
+
+// контейнер
+@import './container.scss';
+
+// оболочка
+@import './wrapper.scss';
+
+// контент
+@import './content.scss';
+
+// шрифты
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+// глобальные стили
+@import './global.scss';
+
+body {
+   font-weight: 400;
+   font-style: normal;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 18px;
+   line-height: 22px;
+   background: #FCF7F1;
+   color: #000;
+}
+
+.header {
+   // .header__top
+
+   &__top {
+      padding: 14px 0px;
+      font-size: 14px;
+      line-height: 21px;
+      border-bottom: 1px solid #DCDCDC;
+   }
+
+
+
+   // .header__top-row
+
+   &__top-row {
+      column-gap: 20px;
+
+
+   }
+
+   // .header__top-column
+
+   &__top-column {
+      .logo {
+         flex: 0 0 100px;
+      }
+
+      .phone {
+         flex: 0 0 20px;
+      }
+
+      .phone-numbers {
+         div {
+            a {
+               color: inherit;
+
+               &:hover {
+                  color: $purple;
+               }
+            }
+         }
+      }
+
+      .mail {
+         img {
+            flex: 0 0 8px;
+            margin-right: 10px;
+         }
+
+         a {
+            span {
+               color: #000;
+            }
+
+            &:hover {
+               span {
+
+                  color: #C5221F;
+               }
+            }
+         }
+      }
+
+      .timetable {
+         span {
+            &:first-child {
+               margin-right: 15px;
+            }
+
+         }
+      }
+
+
+
+      &:nth-child(2) {
+         column-gap: 22px;
+         font-size: 17px;
+         font-weight: bold;
+         line-height: 26px;
+      }
+   }
+
+   .navigation {
+
+      ul {
+         column-gap: 38px;
+
+         li {
+            padding: 10px 0px;
+
+            font-size: 16px;
+            line-height: 24px;
+            color: #929292;
+            font-weight: bold;
+
+            a {
+               color: inherit;
+
+               &:hover {
+                  color: $purple;
+               }
+            }
+
+            &:last-child {
+               padding: 0px 20px;
+               font-weight: bold;
+               color: $purple;
+               border-left: 1px solid #CDCDCD;
+               border-right: 1px solid #CDCDCD;
+               display: flex;
+               align-items: center;
+
+               a {
+                  color: inherit
+               }
+            }
+         }
+      }
+   }
+}
+
+.intro {
+   color: #fff;
+   @include adaptiv-value('padding-top', 180, 60, 0);
+   @include adaptiv-value('padding-bottom', 180, 60, 0);
+   background-image: url('./../images/intro.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   // .intro__row
+
+   &__row {
+      column-gap: 30px;
+   }
+
+   // .intro__column
+
+   &__column {
+
+      &:first-child {
+         p {
+            font-size: 20px;
+            line-height: 24px;
+            max-width:400px;
+
+            big {
+               font-weight: 600;
+
+            }
+         }
+      }
+   }
+
+   // .intro__title
+
+   &__title {
+      font-weight: 600;
+      @include adaptiv-value('font-size', 54, 40, 0);
+      @include adaptiv-value('line-height', 66, 49, 0);
+      max-width: 480px;
+
+      &::after {
+         content: '';
+         display: block;
+         width: 100px;
+         height: 1px;
+         background-color: #DCDCDC;
+         margin: 40px 0px;
+         @include adaptiv-value('margin-top', 40, 30, 0);
+         @include adaptiv-value('margin-bottom', 40, 30, 0);
+      }
+
+      span {
+         color: $purple-light;
+      }
+   }
+
+   // .intro__forms
+
+   &__forms {
+      display: flex;
+   }
+
+   // .intro__form
+
+   &__form {
+      padding: 30px 35px 45px 35px;
+      background: rgba(252, 247, 241, 0.8);
+      font-size: 14px;
+      line-height: 17px;
+      width: 100%;
+   }
+
+   // .intro__form-title
+
+   &__form-title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 30px;
+   }
+
+   // .intro__form-chain-top
+
+   &__form-chain-top {
+      grid-template-columns: 35px 1fr 35px 1fr 35px;
+      margin-bottom: 20px;
+
+      span {
+         background-color: #fff;
+         border-radius: 35px;
+         border: 1px solid #929292;
+         height: 35px;
+         text-align: center;
+         padding: 5px 0px;
+         color: #929292;
+         font-size: 18px;
+         line-height: 22px;
+      }
+
+      .active{
+         background-color: $purple;
+         color: #fff;
+         border: 1px solid transparent;
+      }
+
+      .line {
+         height: 1px;
+         background-color: #929292;
+      }
+
+
+   }
+
+   // .intro__form-chain-bottom
+
+   &__form-chain-bottom {
+      margin-bottom: 50px;
+
+      span{
+         color: #929292;
+      }
+
+      .active{
+         color: #582D7F;
+         font-weight: 600;
+      }
+   }
+
+   // .intro__form-transfers
+
+   &__form-transfers {
+      grid-template-columns:1fr 15px 1fr;
+      column-gap: 10px;
+      margin-bottom: 30px;
+
+      .arrow-to-right {
+         display: flex;
+         align-items: center;
+      }
+   }
+
+   // .intro__form-transfer
+
+   &__form-transfer {
+      padding: 18px 20px;
+      font-size: 16px;
+      line-height: 20px;
+      background-color: #fff;
+      color: #2D2D2D;
+   }
+
+   // .intro__form-transfer-visible
+
+   &__form-transfer-visible {}
+
+   // .intro__form-transfer-hiden
+
+   &__form-transfer-hiden {
+      display: none;
+   }
+
+   input[type=submit]{
+      display: block;
+      margin: 0 auto;
+      padding: 13px 63px;
+      background-color: $purple;
+      color:#fff;
+      font-size: 16px;
+      line-height: 29px;
+      font-weight: bold;
+      border:none;border-radius: 4px;
+      cursor: pointer;
+
+      &:hover{
+         background-color: $green-dark;
+      }
+   }
+}

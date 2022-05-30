@@ -1,0 +1,63 @@
+@import './mixins';
+
+.d-f{
+   display: flex;
+}
+
+.d-g{
+   display: grid;
+}
+
+.jc-sb{
+   justify-content: space-between;
+}
+
+.jc-c{
+   justify-content: center;
+}
+
+.fw-w{
+   flex-wrap: wrap;
+}
+
+.ai-c{
+   align-items: center;
+}
+
+.ta-c{
+   text-align: center;
+}
+
+.ta-e{
+   text-align: end;
+}
+
+.gtc-2{
+   grid-template-columns: repeat(2,1fr);
+}
+
+.gtc-3{
+   grid-template-columns: repeat(3,1fr);
+}
+
+.gtc-4{
+   grid-template-columns: repeat(4,1fr);
+}
+
+.gtc-4-af{
+   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+.gtc-5{
+   grid-template-columns: repeat(5,1fr);
+}
+
+.t-02{
+   transition: 0.2s;
+}
+
+.title{
+   @include adaptiv-value('font-size',48,36,0);
+   @include adaptiv-value('line-height',59,44,0);
+   font-weight: 400;
+}
