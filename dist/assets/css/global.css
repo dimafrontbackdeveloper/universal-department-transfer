@@ -17,6 +17,11 @@
     justify-content: center;
 }
 
+.fd-c {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
 .fw-w {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -39,8 +44,16 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+.gtc-2-af {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
 .gtc-3 {
     grid-template-columns: repeat(3, 1fr);
+}
+
+.gtc-3-af {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .gtc-4 {
@@ -48,19 +61,28 @@
 }
 
 .gtc-4-af {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .gtc-5 {
     grid-template-columns: repeat(5, 1fr);
 }
 
+.gtc-af {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
 .t-02 {
     transition: 0.2s;
 }
 
+.section {
+    padding-top: calc(70px + 40 * ((100vw - 320px) / 1120));
+    padding-bottom: calc(70px + 20 * ((100vw - 320px) / 1120));
+}
+
 .title {
-    font-size: calc(36px + 12 * ((100vw - 320px) / 1600));
-    line-height: calc(44px + 15 * ((100vw - 320px) / 1600));
+    font-size: calc(36px + 12 * ((100vw - 320px) / 1120));
+    line-height: calc(44px + 15 * ((100vw - 320px) / 1120));
     font-weight: 400;
 }

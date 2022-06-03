@@ -16,6 +16,10 @@
    justify-content: center;
 }
 
+.fd-c{
+   flex-direction:column;
+}
+
 .fw-w{
    flex-wrap: wrap;
 }
@@ -40,20 +44,31 @@
    grid-template-columns: repeat(3,1fr);
 }
 
+.gtc-3-af{
+   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
 .gtc-4{
    grid-template-columns: repeat(4,1fr);
 }
 
 .gtc-4-af{
-   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 
 .gtc-5{
    grid-template-columns: repeat(5,1fr);
 }
 
+
+
 .t-02{
    transition: 0.2s;
+}
+
+.section{
+   @include adaptiv-value('padding-top',110,70,0);
+   @include adaptiv-value('padding-bottom',90,70,0);
 }
 
 .title{
